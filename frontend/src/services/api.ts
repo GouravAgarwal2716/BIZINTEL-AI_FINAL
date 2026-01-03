@@ -2,7 +2,7 @@ import axios from 'axios';
 import { supabase } from './supabase';
 
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || '/api',
+    baseURL: 'https://bizintel-ai-final.onrender.com', // Hardcoded for Hackathon Stability
 });
 
 // Request interceptor to add Auth Token
