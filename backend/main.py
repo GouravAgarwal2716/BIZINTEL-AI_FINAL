@@ -3,6 +3,16 @@ from app.routers import auth, salesforce, agents, rag, agentforce, agentforce_tr
 
 app = FastAPI(title="BizIntel AI", version="1.0.0")
 
+# Enable CORS (Cross-Origin Resource Sharing)
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow ALL origins (Vercel, localhost, etc.)
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow ALL methods (GET, POST, OPTIONS, etc.)
+    allow_headers=["*"],  # Allow ALL headers
+)
+
 @app.get("/")
 def read_root():
     return {"message": "BizIntel AI API is running"}
