@@ -6,7 +6,7 @@ pydantic-settings
 supabase
 simple-salesforce
 openai
-pinecone-client
+pinecone
 python-multipart
 python-jose[cryptography]
 passlib[bcrypt]
